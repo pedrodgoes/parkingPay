@@ -10,13 +10,13 @@ const App = () => {
   const [placa, setPlaca] = useState("");
   const [item, setItem] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isTabOut, setIsTabOut] = useState(false);
   const [modalPay, setModalPay] = useState(false);
   const [modalOut, setModalOut] = useState(false);
   const [modalLoading, setModalLoading] = useState(false);
   const [modalConfirmed, setModalConfirmed] = useState(false);
   const [textConfirmed, setTextConfirmed] = useState(false);
   const [errorOut, setErrorOut] = useState(false);
+  const [tabIndex, setTabIndex] = useState(0);
 
   return (
     <div>
@@ -30,8 +30,6 @@ const App = () => {
           setItem,
           isMenuOpen,
           setIsMenuOpen,
-          isTabOut,
-          setIsTabOut,
           modalPay,
           setModalPay,
           modalOut,
@@ -44,6 +42,8 @@ const App = () => {
           setTextConfirmed,
           errorOut,
           setErrorOut,
+          tabIndex,
+          setTabIndex,
         }}
       >
         <Routes>

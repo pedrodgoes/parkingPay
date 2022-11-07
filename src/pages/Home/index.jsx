@@ -8,9 +8,11 @@ import { useContext } from "react";
 import MenuOpen from "../../components/MenuOpen";
 
 function Home() {
-  const { isMenuOpen, isTabOut } = useContext(GlobalContext);
+  const { isMenuOpen, tabIndex, setTabIndex } = useContext(GlobalContext);
 
-  console.log(isTabOut);
+  const handleTabsChange = () => {
+    setTabIndex();
+  };
 
   return (
     <>
@@ -19,7 +21,11 @@ function Home() {
           <Header />
 
           <div className={styles.Body}>
-            <Tabs variant="unstyled">
+            <Tabs
+              variant="unstyled"
+              index={tabIndex}
+              onChange={handleTabsChange}
+            >
               <TabList>
                 <Tab
                   _selected={{
@@ -44,7 +50,6 @@ function Home() {
                     borderRight: "none",
                   }}
                   className={styles.Tabs}
-                  isSelected={isTabOut}
                 >
                   Saída
                 </Tab>

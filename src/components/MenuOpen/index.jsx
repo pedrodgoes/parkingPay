@@ -4,11 +4,9 @@ import menu from "../../assets/menu.svg";
 import close from "../../assets/close.svg";
 import GlobalContext from "../../contexts/GlobalContext";
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 
 function MenuOpen() {
-  const { isMenuOpen, setIsMenuOpen, setIsTabOut } = useContext(GlobalContext);
-  let navigate = useNavigate();
+  const { isMenuOpen, setIsMenuOpen, setTabIndex } = useContext(GlobalContext);
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -16,15 +14,12 @@ function MenuOpen() {
 
   const goToEntrada = () => {
     setIsMenuOpen(false);
-    setTimeout(() => {
-      let path = `/`;
-      navigate(path);
-    }, 200);
+    setTabIndex(0);
   };
 
   const goToSaida = () => {
     setIsMenuOpen(false);
-    setIsTabOut(true);
+    setTabIndex(1);
   };
 
   return (
