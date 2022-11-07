@@ -1,0 +1,88 @@
+.SaidaBody {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 720px;
+    border-radius: 4px;
+    padding: 0 50px;
+}
+
+.SaidaBody p {
+    margin-top: 40px;
+    background-color: var(--white);
+}
+
+.SaidaBody input {
+    margin-top: 7px;
+    width: 624px;
+    height: 67px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    background-color: var(--yellow-small);
+    border: 1px solid var(--gray-medium);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.ButtonPay {
+    margin-top: 13px;
+    width: 624px;
+    height: 67px;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: var(--gray-dark);
+    border: 1px solid var(--purple);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ButtonOut{
+    margin-top: 13px;
+    width: 624px;
+    height: 67px;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: var(--gray-dark);
+    border: 1px solid var(--purple);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ButtonHistory{
+    margin-top: 13px;
+    width: 624px;
+    height: 67px;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    border: none;
+    color: var(--blue);
+    background-color: var(--white);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1080px) {
+    .SaidaBody {
+        width: 360px;
+        padding: 0 25px;
+    }
+
+    .SaidaBody input{
+        width: 312px;
+    }
+    .ButtonPay {
+        width: 312px;
+    }
+    .ButtonOut {
+        width: 312px;
+    }
+
+    .ButtonHistory{ 
+        width: 312px;
+    }
+}

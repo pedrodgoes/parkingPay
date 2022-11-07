@@ -1,0 +1,44 @@
+.HeaderMenuOpen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 20px;
+    height: 60px;
+    background-color: var(--blue);
+    width: 100%;
+    min-width: 360px
+}
+
+.HeaderMenuOpen button {
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.BodyMenuOpen {
+    display: flex;
+    align-items: left;
+    background-color: var(--blue);
+    height: calc(100vh - 60px);
+    flex-direction: column;
+    padding-top: 100px;
+
+}
+
+.BodyMenuOpen button{
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 15px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: left;
+}
+
+.BodyMenuOpen button:nth-child(2){
+    margin-top: 50px;
+}

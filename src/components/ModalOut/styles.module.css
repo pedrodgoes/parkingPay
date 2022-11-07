@@ -1,0 +1,62 @@
+.ModalOutBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    margin-top: 20%;
+}
+
+.ModalOutBody p {
+    font-size: 16px;
+    line-height: 19px;
+    background-color: var(--white);
+}
+
+.ModalOutBody span {
+    color: var(--blue) !important;
+    font-size: 34px;
+    line-height: 52px;
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.ButtonOutModal {
+    margin-top: 13px;
+    width: 624px;
+    height: 67px;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: var(--gray-dark);
+    border: 1px solid var(--purple);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ButtonCloseModal {
+    margin-top: 13px;
+    width: 624px;
+    height: 67px;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: var(--gray-dark);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+    .ModalPayBody {
+        padding: 0 25px;
+    }
+
+    .ModalPayBody p {
+        text-align: center;
+    }
+
+    .ButtonPayModal {
+        width: 280px;
+    }
+    .ButtonOutModal {
+        width: 280px;
+    }
+}

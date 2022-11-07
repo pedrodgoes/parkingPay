@@ -1,0 +1,57 @@
+.HistoricItem {
+    background-color: var(--white);
+    width: 720px;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-left: 10px;
+    height: 420px;
+}
+
+.HistoricItemBody {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+
+.HistoricItemBody p {
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--gray-dark);
+    margin-top: 27px;
+}
+
+.HistoricItemBody span {
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--black);
+}
+
+
+.HistoricItemBody p, span {
+    background-color: var(--white);
+}
+
+.ButtonBackHome {
+    border: none;
+    background-color: var(--white);
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+}
+
+.ItemPlate {
+    color: var(--blue) !important;
+    font-size: 34px;
+    line-height: 52px;
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+@media screen and (max-width: 1080px) {
+    .HistoricItem {
+       width: 360px;
+    }
+}

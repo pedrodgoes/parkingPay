@@ -1,0 +1,19 @@
+.RegisterConfirmed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80opx;
+    background-color: var(--white);
+    height: 560px;
+}
+
+.RegisterConfirmed p {
+    background-color: var(--white);
+}
+
+@media screen and (max-width: 1080px) {
+    .RegisterConfirmed { 
+        height: 280px;
+    }
+}

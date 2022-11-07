@@ -1,0 +1,31 @@
+.Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--gray);
+}
+
+.Body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+  height: calc(100% - 60px);
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.Tabs {
+  width: 360px;
+  height: 50px;
+  border: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .Tabs {
+    width: 180px;
+  }
+}

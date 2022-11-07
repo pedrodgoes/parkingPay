@@ -1,0 +1,11 @@
+.ModalLoadingBody {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.ModalLoadingBody p{
+    background-color: var(--white);
+}

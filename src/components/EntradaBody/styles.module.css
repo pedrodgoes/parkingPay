@@ -1,0 +1,55 @@
+.EntradaBody {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    background-color: var(--white);
+    width: 720px;
+    border-radius: 4px;
+    padding: 0 50px;
+}
+
+.EntradaBody p {
+    margin-top: 40px;
+    background-color: var(--white);
+}
+
+.EntradaBody input {
+    margin-top: 7px;
+    width: 624px;
+    height: 67px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    background-color: var(--yellow-small);
+    border: 1px solid var(--gray-medium);
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.EntradaBody button {
+    margin-top: 13px;
+    width: 624px;
+    height: 67px;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 65px;
+    background-color: var(--gray-dark);
+    border: 1px solid var(--gray-medium);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1080px) {
+    .EntradaBody {
+        width: 360px;
+        padding: 0 25px;
+    }
+
+    .EntradaBody input{
+        width: 312px;
+    }
+    .EntradaBody button {
+        width: 312px;
+    }
+}

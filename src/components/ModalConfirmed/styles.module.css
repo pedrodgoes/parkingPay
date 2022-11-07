@@ -1,0 +1,11 @@
+.ModalConfirmedBody {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20%;
+}
+
+.ModalConfirmedBody p{
+    background-color: var(--white);
+}

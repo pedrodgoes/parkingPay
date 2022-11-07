@@ -1,0 +1,18 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 20px;
+    height: 60px;
+    background-color: var(--blue);
+    width: 100%;
+    min-width: 360px
+}
+
+.Header button {
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    cursor: pointer;
+}
