@@ -17,7 +17,7 @@ function Historic() {
   }, [placa, setHistoric]);
 
   const backHome = () => {
-    window.history.go(-1);
+    navigate(-1);
   };
 
   const getPageItem = (item) => {

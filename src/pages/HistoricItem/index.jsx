@@ -3,12 +3,14 @@ import styles from "./styles.module.css";
 import arrowIcon from "../../assets/shape.svg";
 import GlobalContext from "../../contexts/GlobalContext";
 import Header from "../../components/Header";
+import { useNavigate } from "react-router-dom";
 
 function HistoricItem() {
   const { item } = useContext(GlobalContext);
+  const navigate = useNavigate();
 
   const backHome = () => {
-    window.history.go(-1);
+    navigate(-1);
   };
 
   return (
