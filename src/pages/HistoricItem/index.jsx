@@ -24,7 +24,7 @@ function HistoricItem() {
           <p>PLACA</p>
           <span className={styles.ItemPlate}> {item.plate.toUpperCase()}</span>
           <p>STATUS</p>
-          <span> {!item.left ? "Não Estacionado" : "Estacionado"}</span>
+          <span> {!item.left ? "Estacionado" : "Não Estacionado"}</span>
           <p>TEMPO ATUAL</p>
           <span>
             {" "}
