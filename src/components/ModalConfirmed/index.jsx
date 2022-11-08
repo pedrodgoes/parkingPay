@@ -5,7 +5,10 @@ import { useContext } from "react";
 import GlobalContext from "../../contexts/GlobalContext";
 
 function ModalConfirmed(modalConfirmed) {
-  const { textConfirmed } = useContext(GlobalContext);
+  const { textConfirmed, setIsPay } = useContext(GlobalContext);
+  if (textConfirmed === "PAGO") {
+    setIsPay(true);
+  }
   return (
     <div className={styles.ModalConfirmed}>
       <Modal isOpen={modalConfirmed}>

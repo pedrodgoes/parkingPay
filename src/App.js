@@ -16,6 +16,8 @@ const App = () => {
   const [modalConfirmed, setModalConfirmed] = useState(false);
   const [textConfirmed, setTextConfirmed] = useState(false);
   const [errorOut, setErrorOut] = useState(false);
+  const [isPay, setIsPay] = useState(false);
+  const [isOut, setIsOut] = useState(false);
   const [tabIndex, setTabIndex] = useState(0);
 
   return (
@@ -44,6 +46,10 @@ const App = () => {
           setErrorOut,
           tabIndex,
           setTabIndex,
+          isPay,
+          setIsPay,
+          isOut,
+          setIsOut,
         }}
       >
         <Routes>

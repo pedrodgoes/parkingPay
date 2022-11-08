@@ -11,12 +11,15 @@ function ModalPay({ modalPay, title }) {
     setModalLoading,
     setModalConfirmed,
     setTextConfirmed,
+    setModalOut,
     setErrorOut,
   } = useContext(GlobalContext);
 
   const closeModal = () => {
     setModalPay(false);
   };
+
+  setModalOut(false);
 
   const payParking = () => {
     setModalPay(false);

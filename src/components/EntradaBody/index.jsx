@@ -60,7 +60,11 @@ function EntradaBody() {
       {page && (
         <div className={styles.EntradaBody}>
           <p>Número da placa:</p>
-          <input placeholder="AAA-0000" onChange={(event) => getPlaca(event)} />
+          <input
+            placeholder="AAA-0000"
+            onChange={(event) => getPlaca(event)}
+            maxLength={8}
+          />
           {error && (
             <Alert
               severity="error"

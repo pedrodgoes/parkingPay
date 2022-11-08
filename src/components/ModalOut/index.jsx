@@ -12,6 +12,7 @@ function ModalOut({ modalOut, title }) {
     setModalConfirmed,
     setTextConfirmed,
     setErrorOut,
+    setIsOut,
   } = useContext(GlobalContext);
 
   const closeModal = () => {
@@ -25,6 +26,7 @@ function ModalOut({ modalOut, title }) {
       .post(`https://parking-lot-to-pfz.herokuapp.com/parking/${placa}/out`)
       .then(() => {
         setTextConfirmed("SAÍDA LIBERADA");
+        setIsOut(true);
         setTimeout(() => {
           setModalOut(false);
           setModalConfirmed(true);

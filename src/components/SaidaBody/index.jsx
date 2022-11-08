@@ -18,11 +18,12 @@ function SaidaBody() {
     setModalOut,
     modalLoading,
     modalConfirmed,
+    isPay,
     errorOut,
   } = useContext(GlobalContext);
   let navigate = useNavigate();
 
-  const titlePay = "Confima o pagamento da placa abaixo?";
+  const titlePay = "Confirma o pagamento da placa abaixo?";
   const titleOut = "Confirma a saída do veiculo da placa abaixo?";
 
   const getPlaca = (event) => {
@@ -42,11 +43,17 @@ function SaidaBody() {
     setModalOut(true);
   };
 
+  console.log(isPay, modalOut);
+
   return (
     <>
       <div className={styles.SaidaBody}>
         <p>Número da placa:</p>
-        <input placeholder="AAA-0000" onChange={(event) => getPlaca(event)} />
+        <input
+          placeholder="AAA-0000"
+          onChange={(event) => getPlaca(event)}
+          maxLength={8}
+        />
         {errorOut && (
           <Alert severity="error" style={{ width: 312, marginTop: 13 }}>
             Placa inválida, veículo já pago ou liberado!
@@ -64,10 +71,14 @@ function SaidaBody() {
         >
           PAGAMENTO
         </button>
-
+        {!isPay && !errorOut && (
+          <Alert severity="info" style={{ width: 312, marginTop: 13 }}>
+            É preciso realizar o pagamento para liberar a saída!
+          </Alert>
+        )}
         <button
           onClick={handleModalOut}
-          disabled={placa.length < 8}
+          disabled={placa.length < 8 && !isPay}
           className={styles.ButtonOut}
           style={
             placa.length < 8
@@ -87,7 +98,7 @@ function SaidaBody() {
         </button>
       </div>
       {modalPay && <ModalPay modalPay={modalPay} title={titlePay} />}
-      {modalOut && <ModalOut modalOut={modalOut} title={titleOut} />}
+      {isPay && modalOut && <ModalOut modalOut={modalOut} title={titleOut} />}
       {modalLoading && <ModalLoading modalLoading={modalLoading} />}
       {modalConfirmed && <ModalConfirmed modalConfirmed={modalConfirmed} />}
     </>
