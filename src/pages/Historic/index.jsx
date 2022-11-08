@@ -6,7 +6,8 @@ import Header from "../../components/Header";
 import { useNavigate } from "react-router-dom";
 
 function Historic() {
-  const { placa, historic, setHistoric, setItem } = useContext(GlobalContext);
+  const { placa, historic, setHistoric, setItem, setTabIndex } =
+    useContext(GlobalContext);
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -18,6 +19,7 @@ function Historic() {
 
   const backHome = () => {
     navigate(-1);
+    setTabIndex(1);
   };
 
   const getPageItem = (item) => {

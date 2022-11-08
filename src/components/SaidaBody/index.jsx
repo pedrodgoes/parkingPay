@@ -50,9 +50,10 @@ function SaidaBody() {
       <div className={styles.SaidaBody}>
         <p>Número da placa:</p>
         <input
-          placeholder="AAA-0000"
+          placeholder={placa ? placa : "AAA-0000"}
           onChange={(event) => getPlaca(event)}
           maxLength={8}
+          defaultValue={placa ? placa : ""}
         />
         {errorOut && (
           <Alert severity="error" style={{ width: 312, marginTop: 13 }}>
