@@ -36,6 +36,13 @@
     background-color: var(--white);
 }
 
+.ItemNotHistoric {
+    margin-top: 40px;
+    background-color: var(--white);
+    color: var(--gray-medium);
+    font-weight: 700;
+}
+
 .BoxPay {
     border: 1px solid var(--gray-medium);
     display: flex;

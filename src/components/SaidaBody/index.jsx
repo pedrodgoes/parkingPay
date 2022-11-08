@@ -43,8 +43,6 @@ function SaidaBody() {
     setModalOut(true);
   };
 
-  console.log(isPay, modalOut);
-
   return (
     <>
       <div className={styles.SaidaBody}>

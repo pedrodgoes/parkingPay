@@ -40,37 +40,41 @@ function Historic() {
           </button>
           <h1 className={styles.TitleHistoric}>Placa {placa.toUpperCase()}</h1>
         </div>
-        <div>
-          {historic.length > 0 &&
-            historic
-              ?.map((item, i) => {
-                return (
-                  <button
-                    className={styles.ButtonCard}
-                    key={i}
-                    onClick={() => getPageItem(item)}
-                  >
-                    <div className={styles.BoxPay}>
-                      <div>
-                        <p>Tempo Total</p>
-                        <span>
-                          {item.time
-                            .replace("seconds", "seg")
-                            .replace("minutes", "min")
-                            .replace("hours", "h")
-                            .replace("days", "D")}
-                        </span>
+        {historic.length < 0 ? (
+          <div>
+            {historic.length > 0 &&
+              historic
+                ?.map((item, i) => {
+                  return (
+                    <button
+                      className={styles.ButtonCard}
+                      key={i}
+                      onClick={() => getPageItem(item)}
+                    >
+                      <div className={styles.BoxPay}>
+                        <div>
+                          <p>Tempo Total</p>
+                          <span>
+                            {item.time
+                              .replace("seconds", "seg")
+                              .replace("minutes", "min")
+                              .replace("hours", "h")
+                              .replace("days", "D")}
+                          </span>
+                        </div>
+                        <div>
+                          <p>Pagamento</p>
+                          <span>{item.paid ? "Pago" : "—"}</span>
+                        </div>
                       </div>
-                      <div>
-                        <p>Pagamento</p>
-                        <span>{item.paid ? "Pago" : "—"}</span>
-                      </div>
-                    </div>
-                  </button>
-                );
-              })
-              .reverse()}
-        </div>
+                    </button>
+                  );
+                })
+                .reverse()}
+          </div>
+        ) : (
+          <p className={styles.ItemNotHistoric}>Placa sem histórico!</p>
+        )}
       </div>
     </>
   );
