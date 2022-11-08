@@ -7,6 +7,7 @@ import ModalPay from "../ModalPay";
 import ModalLoading from "../ModalLoading";
 import ModalConfirmed from "../ModalConfirmed";
 import ModalOut from "../ModalOut";
+import useMediaQuery from "../../hooks/useMediaQuery";
 
 function SaidaBody() {
   const {
@@ -25,6 +26,7 @@ function SaidaBody() {
 
   const titlePay = "Confirma o pagamento da placa abaixo?";
   const titleOut = "Confirma a saída do veiculo da placa abaixo?";
+  const isDeviceMobile = useMediaQuery("(max-width: 1080px)");
 
   const getPlaca = (event) => {
     setPlaca(event.target.value);
@@ -54,7 +56,14 @@ function SaidaBody() {
           defaultValue={placa ? placa : ""}
         />
         {errorOut && (
-          <Alert severity="error" style={{ width: 312, marginTop: 13 }}>
+          <Alert
+            severity="error"
+            style={
+              isDeviceMobile
+                ? { width: 312, marginTop: 13 }
+                : { width: 624, marginTop: 13 }
+            }
+          >
             Placa inválida, veículo já pago ou liberado!
           </Alert>
         )}
@@ -71,7 +80,14 @@ function SaidaBody() {
           PAGAMENTO
         </button>
         {!isPay && !errorOut && (
-          <Alert severity="info" style={{ width: 312, marginTop: 13 }}>
+          <Alert
+            severity="info"
+            style={
+              isDeviceMobile
+                ? { width: 312, marginTop: 13 }
+                : { width: 624, marginTop: 13 }
+            }
+          >
             É preciso realizar o pagamento para liberar a saída!
           </Alert>
         )}
